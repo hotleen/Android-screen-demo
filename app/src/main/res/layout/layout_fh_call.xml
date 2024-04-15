@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--呼叫页面-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/rl_call"
+    android:background="@color/fh_color_3000"
+    android:layout_height="match_parent">
+    <!--头像图标-->
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="@mipmap/ic_fh_switch_head"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:layout_marginTop="210dp"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:text="@string/fh_thank"/>
+    <!--呼叫状态描述-->
+    <TextView
+        android:id="@+id/tv_call_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="250dp"
+        android:textColor="@color/fh_9fff"
+        android:textSize="14sp"
+        android:lines="1"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:text="@string/fh_waiting"/>
+
+    <!--挂断按钮与图标-->
+    <ImageView
+        android:id="@+id/iv_call_quit"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:padding="10dp"
+        android:layout_marginBottom="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:src="@mipmap/ic_fh_stop_r"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:textColor="@color/color_666"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:text="@string/fh_quit"/>
+    <!--提示信息弹框-->
+    <include layout="@layout/layout_fh_hint" />
+
+</RelativeLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:showIn="@layout/fragment_my">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_192"
+        android:background="@mipmap/ic_fh_my_bg" />
+
+    <ImageView
+        android:id="@+id/iv_my_head"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_75"
+        android:background="@mipmap/ic_fh_my_head_unlogin" />
+
+    <TextView
+        android:id="@+id/tv_my_name"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_75"
+        android:layout_marginLeft="@dimen/dp_95"
+        android:gravity="left|center_vertical"
+        android:layout_marginRight="@dimen/dp_20"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_22"
+        android:text="登录" />
+
+    <RelativeLayout
+        android:id="@+id/rl_my_apply"
+        android:layout_marginTop="@dimen/dp_152"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_height="@dimen/dp_80"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ic_fh_shadow">
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:background="@mipmap/ic_fh_apply"
+            />
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:textSize="@dimen/sp_16"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:layout_marginLeft="@dimen/dp_48"
+            android:text="申请记录"
+            />
+        <ImageView
+            android:layout_width="@dimen/dp_7"
+            android:layout_height="@dimen/dp_13"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/ic_fh_my_arrow"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_my_stay_still"
+        android:layout_marginTop="@dimen/dp_242"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:layout_height="@dimen/dp_80"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ic_fh_shadow">
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:background="@mipmap/ic_fh_stay_still"
+            />
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:textSize="@dimen/sp_16"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:layout_marginLeft="@dimen/dp_48"
+            android:text="待还记录"
+            />
+        <ImageView
+            android:layout_width="@dimen/dp_7"
+            android:layout_height="@dimen/dp_13"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/ic_fh_my_arrow"/>
+    </RelativeLayout>
+</merge>

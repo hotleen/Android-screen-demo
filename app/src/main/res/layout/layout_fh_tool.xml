@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--会话操作界面-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    android:id="@+id/rl_tool"
+
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_alignParentBottom="true"
+        android:background="@mipmap/ic_fh_bg_tool"/>
+
+    <Button
+        android:id="@+id/btn_sendFrameImg"
+        android:text="推送图片"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_pink_tra_5"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginBottom="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_40"/>
+
+    <Button
+        android:id="@+id/btn_stopFrameImg"
+        android:text="停止推图片"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_pink_tra_5"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp_30"
+        android:layout_marginBottom="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_40"/>
+
+    <Button
+        android:id="@+id/btn_audioRoute"
+        android:text="扬声器"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_pink_tra_5"
+        android:layout_above="@+id/ll_screen_btn"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_40"/>
+
+    <!--挂断按钮-->
+    <LinearLayout
+        android:id="@+id/ll_close_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/ic_hang_up" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/fh_quit"
+            android:textSize="12sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+    <!--顶部提示信息-->
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/fh_title_bg"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+    <!--最小化按钮-->
+    <LinearLayout
+        android:id="@+id/ll_min"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="5dp"
+        android:gravity="center_vertical"
+        android:background="@mipmap/ic_fh_minmize_bg"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="50dp"
+            android:text="@string/fh_min_video"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <!--更多按钮-->
+    <ImageView
+        android:id="@+id/iv_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:padding="5dp"
+        android:src="@mipmap/ic_fh_more_w" />
+    <ImageView
+        android:id="@+id/iv_more_point"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="42dp"
+        android:visibility="gone"
+        android:layout_marginRight="19dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/btn_red_bg_5"
+        />
+    <!--画面旋转按钮-->
+    <ImageView
+        android:id="@+id/iv_rotate"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="60dp"
+        android:visibility="gone"
+        android:padding="5dp"
+        android:src="@mipmap/ic_fh_rotate_w" />
+    <!--更多弹出框-->
+    <RelativeLayout
+        android:id="@+id/rl_more"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="80dp"
+        android:background="@color/fh_color_8000"
+        android:layout_width="125dp"
+        android:layout_height="80dp">
+        <!--推送-->
+        <LinearLayout
+            android:id="@+id/ll_push_btn"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_height="40dp">
+            <ImageView
+                android:id="@+id/iv_push_point"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_margin="10dp"
+                android:visibility="invisible"
+                android:background="@drawable/btn_red_bg_5"
+                />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/ic_fh_switch_push"
+                />
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:text="@string/fh_push"
+                android:gravity="center"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_marginTop="40dp"/>
+        <!--聊天消息-->
+        <LinearLayout
+            android:id="@+id/ll_chat_btn"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_marginTop="41dp"
+            android:orientation="horizontal"
+            android:layout_height="40dp">
+            <ImageView
+                android:id="@+id/iv_chat_point"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:visibility="invisible"
+                android:layout_margin="10dp"
+                android:background="@drawable/btn_red_bg_5"
+                />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/ic_fh_switch_msg"
+                />
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:text="@string/fh_text"
+                android:gravity="center"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+    <!--音视频切换按钮-->
+    <LinearLayout
+        android:id="@+id/ll_video_audio"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ll_close_btn"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_video_audio"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/ic_fh_switch_audio"/>
+
+        <TextView
+            android:id="@+id/tv_video_audio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fh_change_audio"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+    <!--投屏按钮-->
+    <LinearLayout
+        android:id="@+id/ll_screen_btn"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/ll_video_audio"
+        android:layout_above="@id/ll_close_btn"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/ic_fh_screening"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/fh_screen"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+
+    <!--切换摄像头按钮-->
+    <LinearLayout
+        android:id="@+id/ll_switch"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ll_close_btn"
+        android:layout_toRightOf="@+id/ll_video_audio"
+        android:layout_marginLeft="35dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_switch"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/ic_fh_switch_camera"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/tv_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fh_switch_camera"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+
+</RelativeLayout>

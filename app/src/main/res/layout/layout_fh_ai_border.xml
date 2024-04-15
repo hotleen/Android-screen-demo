@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_ai_border"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_34"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="@dimen/dp_29"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/btn_red_bg_radiu_5"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"
+            android:background="@mipmap/ic_fh_red_warn" />
+
+        <TextView
+            android:id="@+id/tv_ai_hint_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:singleLine="true"
+            android:text="请保持人脸在摄像头范围"
+            android:textColor="@color/fh_color_ff5"
+            android:textSize="@dimen/sp_13" />
+    </LinearLayout>
+
+    <!--    <ImageView-->
+    <!--        android:layout_width="@dimen/dp_60"-->
+    <!--        android:layout_height="@dimen/dp_4"-->
+    <!--        android:background="@color/fh_color_ff5" />-->
+
+    <!--    <ImageView-->
+    <!--        android:layout_width="@dimen/dp_4"-->
+    <!--        android:layout_height="@dimen/dp_60"-->
+    <!--        android:background="@color/fh_color_ff5" />-->
+
+    <!--    <ImageView-->
+    <!--        android:layout_width="@dimen/dp_60"-->
+    <!--        android:layout_height="@dimen/dp_4"-->
+    <!--        android:layout_alignParentRight="true"-->
+    <!--        android:background="@color/fh_color_ff5" />-->
+
+    <!--    <ImageView-->
+    <!--        android:layout_width="@dimen/dp_4"-->
+    <!--        android:layout_height="@dimen/dp_60"-->
+    <!--        android:layout_alignParentRight="true"-->
+    <!--        android:background="@color/fh_color_ff5" />-->
+
+    <!--    <ImageView-->
+    <!--        android:layout_width="@dimen/dp_60"-->
+    <!--        android:layout_height="@dimen/dp_4"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:background="@color/fh_color_ff5" />-->
+
+    <!--    <ImageView-->
+    <!--        android:layout_width="@dimen/dp_4"-->
+    <!--        android:layout_height="@dimen/dp_60"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:background="@color/fh_color_ff5" />-->
+
+    <!--    <ImageView-->
+    <!--        android:layout_width="@dimen/dp_60"-->
+    <!--        android:layout_height="@dimen/dp_4"-->
+    <!--        android:layout_alignParentRight="true"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:background="@color/fh_color_ff5" />-->
+
+    <!--    <ImageView-->
+    <!--        android:layout_width="@dimen/dp_4"-->
+    <!--        android:layout_height="@dimen/dp_60"-->
+    <!--        android:layout_alignParentRight="true"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:background="@color/fh_color_ff5" />-->
+
+
+</RelativeLayout>

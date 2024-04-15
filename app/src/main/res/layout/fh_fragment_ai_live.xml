@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_ai_live"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:background="@color/black">
+
+    <RelativeLayout
+        android:id="@+id/rl_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--坐席画面-->
+            <RelativeLayout
+                android:id="@+id/rl_video_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.fhvideo.bank.FHSurfaceView
+                    android:id="@+id/sv_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true" />
+
+            </RelativeLayout>
+
+            <!--本地预览画面-->
+            <RelativeLayout
+                android:id="@+id/rl_video_local"
+                android:layout_width="@dimen/dp_72"
+                android:layout_height="@dimen/dp_128"
+                android:layout_alignParentRight="true"
+                android:visibility="visible">
+
+                <com.fhvideo.bank.FHSurfaceView
+                    android:id="@+id/sv_local"
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_fh_main_waiting" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_main_screen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/fh_color_trans" />
+
+
+
+        <!--        消息 webview-->
+        <com.tencent.smtt.sdk.WebView
+            android:id="@+id/fh_msg_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_200"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/dp_20"
+            android:layout_toLeftOf="@+id/iv_close_btn"
+            android:maxHeight="@dimen/dp_200"
+            android:minHeight="@dimen/dp_100"
+            android:visibility="gone" />
+        <!--挂断按钮-->
+        <ImageView
+            android:id="@+id/iv_close_btn"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:src="@mipmap/ic_hang_up"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/red_border_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/fh_red_border_shape"
+            android:visibility="gone" />
+
+        <!--    出框提示-->
+        <include layout="@layout/layout_fh_ai_border" />
+
+    </RelativeLayout>
+    <!--web页-->
+    <include layout="@layout/layout_fh_video_other" />
+
+
+    <!-- 活体检测 -->
+    <include layout="@layout/layout_fh_ai_check" />
+
+    <!--提示框-->
+    <include layout="@layout/layout_fh_hint" />
+
+    <!--    选择操作 dialog  webview-->
+    <include layout="@layout/layout_fh_ai_dialog_web_view" />
+
+
+</RelativeLayout>

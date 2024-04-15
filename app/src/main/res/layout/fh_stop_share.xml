@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp_50"
+    android:layout_height="@dimen/dp_50"
+    android:id="@+id/rl_float_video"
+    >
+
+    <ImageView
+    android:id="@+id/stop_img"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:src="@mipmap/fh_stop_share_img"
+    android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/back_btn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/btn_gray_trans"
+        android:text="返回"
+        android:gravity="center"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>

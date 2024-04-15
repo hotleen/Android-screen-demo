@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ai_check_lin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <RelativeLayout
+        android:id="@+id/content_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.fhvideo.phoneui.view.ai.CustomLayout
+            android:id="@+id/fh_ai_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/fh_bg_ai">
+            <!-- 根据这个子View所在的位置，计算出透明矩形的位置 -->
+            <FrameLayout
+                android:id="@+id/iv_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+            </FrameLayout>
+        </com.fhvideo.phoneui.view.ai.CustomLayout>
+
+        <TextView
+            android:id="@+id/show_check_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_512"
+            android:background="@drawable/fh_ai_msg_bg_shape"
+            android:paddingHorizontal="@dimen/dp_26"
+            android:paddingVertical="@dimen/dp_7"
+            android:text="请将人脸对准圆圈内"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_22" />
+
+        <ImageView
+            android:layout_width="@dimen/dp_324"
+            android:layout_height="@dimen/dp_324"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_138"
+            android:background="@mipmap/ic_fh_ai_grid" />
+
+        <ImageView
+            android:id="@+id/ai_check_circle_img"
+            android:layout_width="@dimen/dp_354"
+            android:layout_height="@dimen/dp_354"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_123"
+            android:background="@mipmap/ic_fh_ai_normal_circle" />
+
+        <com.fhvideo.phoneui.view.ai.CircularSeekBar
+            android:id="@+id/check_seek_bar"
+            android:layout_width="@dimen/dp_354"
+            android:layout_height="@dimen/dp_354"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_123"
+            android:visibility="gone" />
+
+        <include layout="@layout/layout_fh_ai_border_in_check" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

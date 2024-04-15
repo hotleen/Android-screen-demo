@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--柜员视频模式-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_teller_type"
+    android:layout_width="98dp"
+    android:layout_height="44dp"
+    android:layout_marginLeft="10dp"
+    android:layout_margin="5dp"
+    android:padding="10dp"
+    android:visibility="gone"
+    android:layout_alignParentLeft="true"
+    tools:showIn="@layout/layout_fh_video">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/ic_fh_teller_isscreen"
+        />
+    <ImageView
+        android:id="@+id/iv_teller_type"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="6dp"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_white_tra_90"
+        android:src="@mipmap/ic_fh_ppt_ing" />
+
+    <TextView
+        android:id="@+id/tv_teller_type"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:visibility="gone"
+        android:background="@drawable/btn_pink_tra_5"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:lines="1"
+        android:ellipsize="end"
+        android:textSize="8sp"
+        android:text="@string/fh_show_ppt" />
+</RelativeLayout>

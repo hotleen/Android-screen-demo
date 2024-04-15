@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="color_a8a">#A8AFBF</color>
+
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="fh_title_bg">#41b5cc</color>
+    <color name="fh_027">#0276fe</color>
+    <color name="fh_tv_title">#04374c</color>
+    <color name="fh_color_3000">#33000000</color>
+    <color name="fh_color_6000">#66000000</color>
+    <color name="fh_f72">#f72f54</color>
+    <color name="fh_color_8000">#88000000</color>
+    <color name="fh_color_9c">#9c9c9c</color>
+    <color name="color_333">#333333</color>
+    <color name="color_666">#666666</color>
+    <color name="color_999">#999999</color>
+    <color name="color_32c">#32c380</color>
+    <color name="color_e5">#e5e5e5</color>
+
+    <color name="red">#ff0000</color>
+    <color name="fh_color_ff5">#FF584C</color>
+    <color name="fh_color_f5">#f5f5f5</color>
+
+    <color name="fh_color_FFf1f0">#FFf1f0</color>
+
+    <color name="fh_9fff">#99ffffff</color>
+
+    <color name="fh_color_trans">#00ffffff</color>
+
+    <color name="fh_color_9c_trans">#cc9c9c9c</color>
+
+    <color name="fh_color_d9d9d9">#d9d9d9</color>
+
+    <color name="fh_color_366cbe">#366CBE</color>
+
+    <color name="fh_color_1E8">#1E85FF</color>
+    <color name="fh_color_dfe">#dfe9f6</color>
+    <color name="fh_color_007">#0075FF</color>
+
+
+    <color name="fh_color_62b">#62b3ff</color>
+    <color name="fh_color_317">#3179f5</color>
+    <color name="fh_color_2F2F2F">#2F2F2F</color>
+
+    <color name="fh_color_454444">#454444</color>
+
+</resources>

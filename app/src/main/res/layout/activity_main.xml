@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        style="@style/tv_title"
+        android:layout_marginTop="20dp"
+        android:text="@string/server_url" />
+
+    <EditText
+        android:id="@+id/et_url"
+        style="@style/et_home"
+        android:layout_marginTop="20dp"
+        android:text="http://" />
+
+    <TextView
+        style="@style/tv_title"
+        android:layout_marginTop="70dp"
+        android:text="@string/cus_uid" />
+
+    <EditText
+        android:id="@+id/et_uid"
+        style="@style/et_home"
+        android:layout_marginTop="70dp"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        style="@style/tv_title"
+        android:layout_marginTop="120dp"
+        android:text="token" />
+
+    <EditText
+        android:id="@+id/et_token"
+        style="@style/et_home"
+        android:layout_marginTop="120dp"
+        android:text="token" />
+
+    <TextView
+        style="@style/tv_title"
+        android:layout_marginTop="170dp"
+        android:text="@string/call_type" />
+
+    <RadioGroup
+        android:id="@+id/rg_params"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_type"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/account_type" />
+
+        <RadioButton
+            android:id="@+id/rb_skill"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/skill" />
+
+        <RadioButton
+            android:id="@+id/rb_teller"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/teller" />
+    </RadioGroup>
+
+    <TextView
+        style="@style/tv_title"
+        android:layout_marginTop="220dp"
+        android:text="@string/account_type" />
+
+    <EditText
+        android:id="@+id/et_account"
+        style="@style/et_home"
+        android:layout_marginTop="220dp" />
+
+    <TextView
+        style="@style/tv_title"
+        android:layout_marginTop="270dp"
+        android:text="@string/skill" />
+
+    <EditText
+        android:id="@+id/et_skill"
+        style="@style/et_home"
+        android:layout_marginTop="270dp" />
+    <TextView
+        style="@style/tv_title"
+        android:layout_marginTop="320dp"
+        android:text="@string/teller" />
+
+    <EditText
+        android:id="@+id/et_teller"
+        style="@style/et_home"
+        android:layout_marginTop="320dp" />
+    <TextView
+        style="@style/tv_title"
+        android:layout_marginTop="370dp"
+        android:text="extData" />
+
+    <EditText
+        android:id="@+id/et_extdata"
+        style="@style/et_home"
+        android:layout_height="40dp"
+        android:layout_marginTop="370dp"
+        android:gravity="top|left"
+        android:inputType="textMultiLine" />
+
+    <TextView
+        android:id="@+id/tv_call_audio"
+        style="@style/btn_home"
+        android:layout_centerHorizontal="false"
+        android:layout_width="150dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="420dp"
+        android:text="音频呼叫" />
+
+    <TextView
+        android:id="@+id/tv_call_video"
+        style="@style/btn_home"
+        android:layout_centerHorizontal="false"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_width="150dp"
+        android:layout_marginTop="420dp"
+        android:text="视频呼叫" />
+
+
+    <TextView
+        android:id="@+id/tv_upt_url"
+        style="@style/btn_home"
+        android:layout_width="260dp"
+        android:layout_marginTop="470dp"
+        android:text="@string/upt_server_url" />
+
+    <TextView
+        android:id="@+id/tv_360"
+        style="@style/btn_home"
+        android:layout_width="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="520dp"
+        android:visibility="invisible"
+        android:text="多通道IM" />
+
+    <TextView
+        android:id="@+id/tv_540"
+        style="@style/btn_home"
+        android:layout_width="80dp"
+        android:layout_toRightOf="@+id/tv_360"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="520dp"
+        android:visibility="visible"
+        android:textSize="@dimen/dp_13"
+        android:text="腾讯公有IM" />
+
+    <TextView
+        android:id="@+id/tv_541"
+        style="@style/btn_home"
+        android:layout_width="80dp"
+        android:layout_toRightOf="@+id/tv_540"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="520dp"
+        android:visibility="visible"
+        android:textSize="@dimen/dp_13"
+        android:text="腾讯私有IM" />
+
+    <TextView
+        android:id="@+id/tv_720"
+        style="@style/btn_home"
+        android:layout_width="80dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="520dp"
+        android:visibility="visible"
+        android:text="网易IM" />
+
+
+    <TextView
+        android:id="@+id/select_tx"
+        android:layout_width="@dimen/dp_100"
+        android:layout_below="@+id/tv_720"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        style="@style/btn_home"
+        android:visibility="visible"
+        android:text="腾讯通道"/>
+
+    <TextView
+        android:id="@+id/select_wy"
+        android:layout_width="@dimen/dp_100"
+        android:layout_below="@+id/tv_720"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_centerHorizontal="true"
+        style="@style/btn_home"
+        android:visibility="gone"
+        android:text="网易通道"/>
+
+
+    <TextView
+        android:id="@+id/select_zego"
+        android:layout_width="@dimen/dp_100"
+        android:layout_below="@+id/tv_720"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        style="@style/btn_home"
+        android:visibility="visible"
+        android:text="即构通道"/>
+
+    <TextView
+        android:id="@+id/channel_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/select_zego"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/dp_20"
+        android:visibility="visible"
+        android:text=""/>
+
+    <!-- <TextView
+         android:id="@+id/tv_zh"
+         android:layout_width="80dp"
+         android:layout_marginTop="500dp"
+         android:layout_marginLeft="10dp"
+         android:layout_centerHorizontal="false"
+
+         android:text="简体"
+         style="@style/btn_home" />
+
+     <TextView
+         android:id="@+id/tv_en"
+         android:layout_width="80dp"
+         android:layout_marginLeft="100dp"
+         android:layout_marginTop="500dp"
+         android:layout_centerHorizontal="false"
+
+         android:text="English"
+         style="@style/btn_home" />
+
+     <TextView
+         android:id="@+id/tv_zh_tw"
+         android:layout_width="80dp"
+         android:layout_marginTop="500dp"
+         android:layout_marginLeft="190dp"
+         android:layout_centerHorizontal="false"
+         android:text="繁體"
+         style="@style/btn_home" />
+     <TextView
+         android:id="@+id/tv_sys"
+         android:layout_width="80dp"
+         android:layout_marginTop="500dp"
+         android:layout_marginLeft="280dp"
+         android:layout_centerHorizontal="false"
+         android:text="@string/sys"
+         style="@style/btn_home" />
+ -->
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <!--提示信息弹框-->
+    <include layout="@layout/layout_fh_hint" />
+
+</RelativeLayout>

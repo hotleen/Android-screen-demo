@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">客户端demo</string>
+    <string name="server_url">服務端地址</string>
+    <string name="call_type">路由方式</string>
+    <string name="cus_uid">客戶號</string>
+    <string name="account_type">機構號</string>
+    <string name="skill">技能嗎</string>
+    <string name="teller">座席號</string>
+    <string name="call">呼叫</string>
+    <string name="upt_server_url">更換服務端地址</string>
+    <string name="sys">系統</string>
+    <string name="not_null">不能爲空</string>
+    <string name="back_video">您確定要返回會話界面嗎？</string>
+    <string name="fh_show_doc_hint">為了您的數據安全，投文檔過程中收到短信或其他通知時會結束投屏。如想投文檔過程中不受干擾，您可以關閉通知的“頂部預覽”功能。</string>
+
+    <string name="fh_keep_show">繼續投屏</string>
+    <string name="fh_end_show">返回繪畫</string>
+
+    <string name="fh_net_weak">當前網絡不佳！</string>
+</resources>

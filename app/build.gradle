@@ -1,0 +1,149 @@
+apply plugin: 'com.android.application'
+def and = rootProject.ext.android
+def dep = rootProject.ext.dependencies
+
+android {
+    compileSdkVersion and.compileSdkVersion
+    buildToolsVersion and.buildToolsVersion
+
+    defaultConfig {
+        flavorDimensions "NBank"
+
+        applicationId "com.fhvideo.phone"
+        minSdkVersion and.minSdkVersion
+        targetSdkVersion and.targetSdkVersion
+        versionCode and.versionCodeApp
+        versionName and.versionNameApp
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        multiDexEnabled true
+
+        ndk{
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+        }
+        sourceSets{
+            main {
+                jniLibs.srcDirs = ['src/main/jniLibs']
+            }
+        }
+    }
+    /*apk签名*/
+    signingConfigs{
+        demo {
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+
+    }
+    productFlavors {
+        demo {
+            manifestPlaceholders = [APP_CHANNEL_VALUE: "demo"]
+            signingConfig signingConfigs.demo
+            buildConfigField("String", "BASE_URL", "\"http://192.168.6.52:8081\"")
+            if(project.hasProperty("FHAPKChannel")){
+                buildConfigField("String", "BASE_RTC", "\""+project.getProperty("FHAPKChannel")+"\"")
+            }else {
+                buildConfigField("String", "BASE_RTC", "\"N\"")
+            }
+        }
+    }
+
+    File propFile = file('signing.properties');//签名密钥
+    if (propFile.exists()) {
+        def Properties props = new Properties()
+        props.load(new FileInputStream(propFile))
+        if (props.containsKey('STORE_FILE') && props.containsKey('STORE_PASSWORD') &&
+                props.containsKey('KEY_ALIAS') && props.containsKey('KEY_PASSWORD')) {
+            android.signingConfigs.demo.storeFile = file(props['STORE_FILE'])
+            android.signingConfigs.demo.storePassword = props['STORE_PASSWORD']
+            android.signingConfigs.demo.keyAlias = props['KEY_ALIAS']
+            android.signingConfigs.demo.keyPassword = props['KEY_PASSWORD']
+
+        } else {
+            android.buildTypes.release.signingConfig = null
+        }
+    } else {
+        android.buildTypes.release.signingConfig = null
+    }
+
+    //if (outputFile.name.endsWith('app-demo-release.apk'))
+    applicationVariants.all { variant ->
+        //修改输出apk路径
+        def buildType = variant.buildType.name // 编译类型
+        def  channel = "T"//通道
+        if(project.hasProperty("FHAPKChannel")){
+            channel = project.getProperty("FHAPKChannel")//通道
+        }
+        if(buildType == "release"){
+            def apkDir = new File("${project.rootDir}/bakApk/${variant.versionName}/${channel}")
+            variant.getPackageApplication().outputDirectory = apkDir
+        }
+        variant.outputs.all { output ->
+            if(project.hasProperty("buildByRelease")){
+                output.outputFileName = "AndroidClient_V_${android.defaultConfig.versionName}.apk"
+            }else if(project.hasProperty("buildByJenkins")){
+                def createTime = new Date().format("dd-HH-mm-ss", TimeZone.getTimeZone("GMT+8")) //获取时间
+                output.outputFileName = "AndroidClient_V_${android.defaultConfig.versionName}_${createTime}.apk"
+            }else {
+                output.outputFileName = "AndroidClient_V_${android.defaultConfig.versionName}.apk"
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+configurations {
+    all*.exclude group: 'com.google.code.gson'
+    all*.exclude group: 'com.squareup.okhttp3'
+    all*.exclude group: 'com.squareup.okio'
+    all*.exclude group: 'com.android.support',module:'support-v13'
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    testImplementation 'junit:junit:4.12'
+
+    implementation 'com.weigan:loopView:0.2.2'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+
+    api files('src/main/jniLibs/eventbus-3.2.0.jar')
+    api files('src/main/jniLibs/gson-2.8.5.jar')
+    api files('src/main/jniLibs/okhttp-3.12.1.jar')
+    api files('src/main/jniLibs/okio-1.15.0.jar')
+
+    api files('src/main/jniLibs/tbssdk_43967.jar')
+//    api files('src/main/jniLibs/glide-4.13.1.jar')
+
+    implementation 'com.github.bumptech.glide:glide:4.13.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'
+
+    api 'com.tencent.bugly:crashreport:3.3.3'
+    api 'com.tencent.bugly:nativecrashreport:3.7.7'
+
+    debugImplementation('com.squareup.leakcanary:leakcanary-android:2.4')
+
+    if(project.hasProperty("buildByJenkins")){
+        api project(':FHSDK:fhbank')
+//        api project(':FHSDK:com.fhvideo.phoneui')
+    }else {
+        api(name: dep.fhbank, ext: 'aar')
+//        api(name: "phoneui_"+  dep.versionNameAar, ext: 'aar')
+    }
+}

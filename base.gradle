@@ -1,0 +1,33 @@
+ext {
+    importModule = false
+
+    android = [
+            compileSdkVersion: 29,
+            buildToolsVersion: "28.0.3",
+            minSdkVersion    : 16,
+            targetSdkVersion : 29,
+            versionCode      : 24,
+            versionName      : "SDK_VERSION",
+            versionCodeApp   : 73,
+            versionNameApp   : "SDK_VERSION",
+
+
+    ]
+
+    dependencies = [
+            versionNamejar  : "SDK_VERSION.jar",
+            versionNameAar  : "SDK_VERSION",
+
+            fhbank  : "fhbank_SDK_VERSION",
+
+            appcompat_v7    : 'com.android.support:appcompat-v7:28.+',
+            eventbus        : 'src/main/jniLibs/eventbus-3.2.0.jar',
+            gson            : 'src/main/jniLibs/gson-2.8.5.jar',
+            okhttp          : 'src/main/jniLibs/okhttp-3.12.1.jar',
+            okio            : 'src/main/jniLibs/okio-1.15.0.jar',
+            glide           : 'src/main/jniLibs/glide-3.6.0.jar',
+            tbssdk          : 'src/main/jniLibs/tbssdk_43967.jar',
+
+    ]
+
+}

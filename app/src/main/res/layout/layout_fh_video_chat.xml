@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:showIn="@layout/layout_fh_video">
+    <!--聊天列表界面-->
+    <RelativeLayout
+        android:id="@+id/rl_chat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="200dp"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:src="@mipmap/ic_fh_chat_bg_1"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:text="@string/fh_ask_sth" />
+
+        <ImageView
+            android:id="@+id/iv_chat_close"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="12dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_fh_black_end" />
+
+        <TextView
+            android:id="@+id/tv_chat_hint"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="40dp"
+            android:paddingTop="50dp"
+            android:textColor="@color/color_999"
+            android:textSize="18dp"
+            android:text="@string/fh_no_msg" />
+
+        <ListView
+            android:id="@+id/lv_chat"
+            android:divider="@color/fh_color_trans"
+            android:layout_marginTop="40dp"
+            android:dividerHeight="5dp"
+            android:scrollbars="none"
+            android:layout_marginBottom="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_chat_btn"
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:text="@string/fh_i_think"
+            android:paddingLeft="10dp"
+            android:textSize="14dp"
+            android:textColor="@color/color_999"
+            android:gravity="center_vertical"
+            android:background="@drawable/btn_gray_yin_huan_5" />
+    </RelativeLayout>
+    <!--文本输入框-->
+    <RelativeLayout
+        android:id="@+id/rl_chat_et"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/et_chat"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/fh_color_3000"
+            android:imeOptions="actionSend"
+            android:textSize="14dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="60dp"
+            android:textColor="@color/white"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:hint="@string/fh_i_think"
+            android:textColorHint="@color/white"
+            android:gravity="center_vertical|left" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:src="@mipmap/ic_fh_et" />
+        <!--返回与发送按钮-->
+        <TextView
+            android:id="@+id/tv_chat_send"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_blue_bg_5"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:text="@string/fh_back" />
+    </RelativeLayout>
+</merge>

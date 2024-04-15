@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:clickable="true"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/dp_20"
+    android:paddingTop="@dimen/dp_50">
+
+    <Button
+        android:id="@+id/close"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_42"
+        android:background="@color/red"
+        android:text="关闭"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_15" />
+
+    <Button
+        android:id="@+id/audio_route"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_42"
+        android:layout_below="@+id/close"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@color/color_e5"
+        android:text="音频路由-当前-->扬声器"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_15" />
+
+    <Button
+        android:id="@+id/mute_audio"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_42"
+        android:layout_below="@+id/audio_route"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@color/color_e5"
+        android:text="开关麦克风-当前-->开启"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_15" />
+
+    <Button
+        android:id="@+id/enable_audio_volume"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_42"
+        android:layout_below="@+id/mute_audio"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@color/color_e5"
+        android:text="预设音量大小回调开关-当前-->关闭"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_15" />
+
+
+    <TextView
+        android:id="@+id/local_voice"
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="@dimen/dp_42"
+        android:layout_below="@+id/enable_audio_volume"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@color/color_e5"
+        android:gravity="center"
+        android:text="本地音量->0"
+        android:textSize="@dimen/sp_15" />
+
+    <TextView
+        android:id="@+id/remote_voice"
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="@dimen/dp_42"
+        android:layout_below="@+id/enable_audio_volume"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@color/color_e5"
+        android:gravity="center"
+        android:text="远端音量->0" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_42"
+        android:layout_below="@+id/remote_voice"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="音量大小开关需要在开启会话前配置，会中无无效。这里开启默认300ms回调一次" />
+
+</RelativeLayout>

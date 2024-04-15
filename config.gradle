@@ -1,0 +1,54 @@
+ext {
+    android = [
+            compileSdkVersion: 29,
+            buildToolsVersion: "29.0.3",
+            minSdkVersion    : 21,
+            targetSdkVersion : 29,
+            versionCode      : 25,
+            versionName      : "2.8.40616",
+            versionCodeApp   : 77,
+            versionNameApp   : "2.8.40616",
+
+    ]
+
+    dependencies = [
+            versionNamejar  : "2.8.40601.jar",
+            versionNameAar  : "2.8.40620",
+
+            fhbank  : "fhbank_2.8.40620",
+
+            appcompat_v7    : 'androidx.appcompat:appcompat:1.0.0',
+            eventbus        : 'src/main/jniLibs/eventbus-3.2.0.jar',
+            gson            : 'src/main/jniLibs/gson-2.8.5.jar',
+            okhttp          : 'src/main/jniLibs/okhttp-3.12.1.jar',
+            okio            : 'src/main/jniLibs/okio-1.15.0.jar',
+            glide           : 'src/main/jniLibs/glide-3.6.0.jar',
+            tbssdk          : 'src/main/jniLibs/tbssdk_43967.jar',
+            teduboard       : 'TEduBoardSdkNoTbs-2.4.4.14',
+
+            zegoliveroom    : 'src/main/jniLibs/zegoliveroom_10.28.jar',
+            zegoqueue       : 'src/main/jniLibs/zegoqueue.jar',
+            txim            : 'src/main/jniLibs/imsdk-smart-5.1.153.jar',
+            txrtc           : 'src/main/jniLibs/liteavsdk_10.8.0.13065.jar',
+
+            fhcommon        : 'src/main/jniLibs/fhcommon-',
+            fhboard         : 'src/main/jniLibs/fhboard-',
+            fhtim           : 'src/main/jniLibs/fhtim-',
+            fhtrtc          : 'src/main/jniLibs/fhtrtc-',
+            fhnim           : 'src/main/jniLibs/fhnim-',
+            fhnrtc          : 'src/main/jniLibs/fhnrtc-',
+            fhwater         : 'src/main/jniLibs/fhwater-',
+            fhzrtc          : 'src/main/jniLibs/fhzrtc-',
+
+            nim_base        : 'src/main/jniLibs/nim-basesdk-6.8.1.jar',
+            nim_chat        : 'src/main/jniLibs/nim-chatroom-6.8.1.jar',
+            nim_avsi        : 'src/main/jniLibs/nim-avsignalling-6.8.1.jar',
+            nim_avchat      : 'src/main/jniLibs/nim-avchat-6.8.1.jar',
+            nim_rts         : 'src/main/jniLibs/nim-rts-6.8.1.jar',
+            nim_suppert     : 'src/main/jniLibs/nim-superteam-6.8.1.jar',
+            nim_sdk         : 'src/main/jniLibs/nrtc-sdk.jar',
+
+
+    ]
+
+}

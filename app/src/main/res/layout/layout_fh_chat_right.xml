@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_marginTop="15dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="5dp"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/ic_fh_head_custom"/>
+    <TextView
+        android:id="@+id/tv_chat_time"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/color_999"
+        android:textSize="10sp"
+        android:layout_marginRight="60dp"/>
+    <TextView
+        android:id="@+id/tv_chat_content"
+        android:layout_below="@id/tv_chat_time"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:textColor="@color/white"
+        android:background="@drawable/ic_fh_chat_right"
+        android:textSize="14sp"
+        android:layout_marginRight="50dp"/>
+
+</RelativeLayout>

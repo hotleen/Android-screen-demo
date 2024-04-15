@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">客户端demo</string>
+    <string name="server_url">Server address</string>
+    <string name="call_type">routing</string>
+    <string name="cus_uid">Customer number</string>
+    <string name="account_type">Institutions</string>
+    <string name="skill">Skills code</string>
+    <string name="teller">Position no</string>
+    <string name="call">Call</string>
+    <string name="upt_server_url">Change server address</string>
+    <string name="sys">System</string>
+    <string name="not_null">Can\'t be empty!</string>
+    <string name="back_video">Are you sure you want to return to the session interface?</string>
+    <string name="fh_show_doc_hint">For the safety of your data, the projection on screen will be closed when you receive text messages or other notifications during the process of document submission.  If you want to be undisturbed during document submission, you can turn off the "Top Preview" feature of the notification.</string>
+
+    <string name="fh_keep_show">Keep</string>
+    <string name="fh_end_show">Back</string>
+
+    <!--todo  -->
+    <string name="fh_net_weak"></string>
+</resources>

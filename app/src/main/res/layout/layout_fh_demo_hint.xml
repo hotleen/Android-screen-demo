@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--提示框-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fh_rl_hint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fh_color_6000"
+    android:visibility="gone"
+    >
+
+    <RelativeLayout
+        android:layout_width="260dp"
+        android:layout_height="180dp"
+        android:background="@drawable/btn_gray_yin_huan_5"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"
+            android:text="@string/fh_hint" />
+
+        <!--提示信息-->
+        <TextView
+            android:id="@+id/tv_hint_msg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/color_999"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:textSize="13sp"
+            android:maxLines="4"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:padding="8dp"
+             />
+        <!--左边按钮-->
+        <TextView
+            android:id="@+id/tv_hint_cancel"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:textColor="@color/color_666"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:textSize="14sp"
+            android:text="@string/fh_cancel" />
+        <!--右边按钮-->
+        <TextView
+            android:id="@+id/tv_hint_confirm"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:textColor="@color/fh_title_bg"
+            android:textSize="14sp"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:text="@string/fh_confirm" />
+        <ImageView
+            android:layout_width="1px"
+            android:layout_height="@dimen/dp_35"
+            android:background="@color/color_e5"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:background="@color/color_e5"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_35"
+            android:layout_height="1px"/>
+
+        <!--确定按钮-->
+        <TextView
+            android:id="@+id/tv_hint_sub"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:textColor="@color/color_666"
+            android:textSize="14dp"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:background="@color/white"
+            android:text="@string/fh_confirm" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

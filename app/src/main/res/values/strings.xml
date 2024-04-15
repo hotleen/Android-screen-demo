@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">客户端demo</string>
+    <string name="server_url">服务器地址</string>
+    <string name="call_type">路由方式</string>
+    <string name="cus_uid">客户号</string>
+    <string name="cus_uid_matches">客户号只能为数字字母组合</string>
+
+    <string name="account_type">机构号</string>
+    <string name="skill">技能码</string>
+    <string name="teller">柜员号</string>
+    <string name="call">呼叫</string>
+    <string name="upt_server_url">更换服务端地址</string>
+    <string name="sys">系统</string>
+    <string name="not_null">不能为空</string>
+    <string name="back_video">您确定要返回会话界面吗？</string>
+    <string name="fh_show_doc_hint">为了您的数据安全，投文档过程中收到短信或其他通知时会结束投屏。如想投文档过程中不受干扰，您可以关闭通知的“顶部预览”功能。</string>
+
+    <string name="fh_keep_show">继续投屏</string>
+    <string name="fh_end_show">返回会话</string>
+
+    <string name="fh_call_inform">投屏通知</string>
+    <string name="fh_float_hint">建议开启悬浮通知和锁屏通知</string>
+
+
+    <string name="fh_web_error">页面加载出错...</string>
+
+    <string name="fh_change_video">切换视频</string>
+    <string name="fh_change_audio">切换音频</string>
+    <string name="fh_show_ppt">PPT播放中...</string>
+    <string name="fh_show_screen">柜员投屏中...</string>
+
+    <string name="fh_ask_sth">说点什么</string>
+    <string name="fh_no_msg">暂无会话消息</string>
+    <string name="fh_i_think">我想说...</string>
+    <string name="fh_back">返回</string>
+    <string name="fh_send">发送</string>
+
+    <string name="fh_receive_push">接收的推送</string>
+    <string name="fh_no_push">暂无推送</string>
+
+    <string name="fh_hint">提示</string>
+    <string name="fh_confirm">确定</string>
+    <string name="fh_cancel">取消</string>
+    <string name="fh_quit">挂断</string>
+    <string name="fh_wait">再等等</string>
+
+    <string name="fh_teller_is_audio">柜员语音通话中</string>
+    <string name="fh_min_video">最小化</string>
+    <string name="fh_push">接收推送</string>
+    <string name="fh_text">文字聊天</string>
+    <string name="fh_screen">投屏</string>
+    <string name="fh_switch_camera">切换摄像头</string>
+
+    <string name="fh_thank">感谢您使用视频营业厅</string>
+    <string name="fh_teller_busy">当前座席正忙，请您稍后再试</string>
+    <string name="fh_view_now">立即查看</string>
+    <string name="fh_quit_call">是否挂断本次呼叫？</string>
+    <string name="fh_loading">视频加载中...</string>
+    <string name="fh_min_video_sure"> 您确定要缩小会话窗口吗？</string>
+    <string name="fh_uid"> 工号</string>
+    <string name="fh_time"> 视频柜员为您服务，当前通话时长为</string>
+    <string name="fh_minute"> 分</string>
+    <string name="fh_second"> 秒</string>
+    <string name="fh_share_screen"> 您确定将您的屏幕共享给柜员吗？</string>
+    <string name="fh_close_video"> 您确定要关闭会话吗？</string>
+
+    <!--SDK 文本-->
+    <string name="fh_location_permission">定位失败，请开启定位权限或检查网络</string>
+    <string name="fh_waiting">正在发起呼叫，请稍等</string>
+    <string name="fh_busy">对方忙</string>
+    <string name="fh_metting">已接通</string>
+    <string name="fh_login_success">登录成功</string>
+    <string name="fh_phone_not_support">您的手机暂时不支持这个功能</string>
+
+    <string name="fh_reagain">客户端无响应，请稍后重试</string>
+    <string name="fh_screen_permission">没权限</string>
+    <string name="fh_float_error">获取不到对应权限。请打开手机设置设置允许显示悬浮窗</string>
+
+    <!-- 常用错误提示 -->
+    <string name="fh_net_error">当前无网络连接,请在设置中打开网络</string>
+    <string name="fh_error">网络异常，操作未能完成</string>
+    <string name="fh_no_user_info">未获取到该用户信息</string>
+    <string name="fh_server_error">服务异常，请反馈给客服</string>
+    <string name="fh_cancel_screen">您取消了投屏</string>
+
+    <string name="fh_net_weak">当前网络不佳</string>
+
+    <string name="fh_net_weak_hint">网络不佳，请检查网络设置</string>
+    <string name="fh_call_timeout">"连接超时，是否要取消呼叫"</string>
+    <string name="leave_net_error">"网络异常，请重试"</string>
+    <string name="fh_teller_close">"座席已挂断，会话结束"</string>
+    <string name="fh_thrid_close">"第三方座席已退出"</string>
+    <string name="fh_thrid_confirm">"座席正在为您转接会话，请稍等"</string>
+    <string name="fh_call_quit">正在等待座席接听，是否继续等待？</string>
+
+    <string name="fh_busi_success">恭喜您，业务办理完成！</string>
+    <string name="fh_busi_error">业务办理失败，您可以转人工继续办理或退出！</string>
+
+
+    <string name="fh_net_bad">网络不佳，可能影响会话质量</string>
+</resources>

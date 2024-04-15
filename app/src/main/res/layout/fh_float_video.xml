@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp_72"
+    android:layout_height="@dimen/dp_128"
+    android:id="@+id/rl_float_video"
+    >
+    <com.fhvideo.bank.FHSurfaceView
+        android:id="@+id/render_float"
+        android:layout_alignParentRight="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/iv_float"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_75"
+            android:src="@mipmap/ic_fh_audio_ing"
+            />
+
+</RelativeLayout>

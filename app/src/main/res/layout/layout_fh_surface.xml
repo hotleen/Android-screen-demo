@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--视频界面-->
+<merge xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:showIn="@layout/layout_fh_video">
+    <RelativeLayout
+        android:id="@+id/rl_main"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_fh_main_waiting" />
+
+
+    </RelativeLayout>
+    <!--坐席画面-->
+    <RelativeLayout
+        android:id="@+id/rl_video_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <com.fhvideo.bank.FHSurfaceView
+            android:id="@+id/sv_main"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/iv_net_main"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:visibility="gone"
+            android:src="@mipmap/ic_fh_video_network_good"/>
+
+    </RelativeLayout>
+
+
+
+
+    <ImageView
+        android:id="@+id/iv_main_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fh_color_trans"
+        />
+
+
+    <!--本地预览画面-->
+    <RelativeLayout
+        android:id="@+id/rl_video_local"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/dp_80"
+        android:layout_width="@dimen/dp_72"
+        android:layout_height="@dimen/dp_128">
+
+        <com.fhvideo.bank.FHSurfaceView
+            android:id="@+id/sv_local"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/iv_net_local"
+            android:layout_alignParentLeft="true"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:src="@mipmap/ic_fh_video_network_good"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_local"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="80dp"
+        android:layout_width="60dp"
+        android:layout_height="75dp"
+        android:visibility="gone"
+        android:src="@mipmap/ic_fh_audio_ing" />
+    <!--第三方画面-->
+    <RelativeLayout
+        android:id="@+id/rl_video_third"
+        android:layout_marginTop="@dimen/dp_220"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:layout_width="@dimen/dp_72"
+        android:layout_height="@dimen/dp_128"
+        >
+
+        <com.fhvideo.bank.FHSurfaceView
+            android:id="@+id/sv_third"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/iv_net_thrid"
+            android:layout_alignParentLeft="true"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:src="@mipmap/ic_fh_video_network_good"/>
+
+    </RelativeLayout>
+
+    <!--第四方画面-->
+    <com.fhvideo.bank.FHSurfaceView
+        android:id="@+id/sv_fourth"
+        android:layout_marginTop="360dp"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:layout_width="72dp"
+        android:layout_height="128dp"/>
+
+</merge>
