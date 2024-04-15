@@ -109,7 +109,7 @@ public class FHLiveActivity extends BaseActivity implements FHLiveListener {
         activity = this;
         setContentView(FHResource.getInstance().getId(this, "layout", "layout_fh_live"));
         returnStartActivity = true;
-        // todo: 2. 注册eventbus
+        // todo: 2. 注册eventbus add
         EventBus.getDefault().register(this);
         liveData = getIntent().getStringExtra("liveData");
         tmpData = GsonUtil.fromJson(liveData, LiveData.class);
@@ -412,6 +412,7 @@ public class FHLiveActivity extends BaseActivity implements FHLiveListener {
         toLive();
     }
 
+    // todo: 10. 构造悬浮窗
     @Override
     public void addFlot(String type) {
         moveAppToFront();
@@ -574,7 +575,7 @@ public class FHLiveActivity extends BaseActivity implements FHLiveListener {
             if (resultCode == 0) {
                 showError(getResString("fh_cancel_screen"), false);
             } else {
-                // todo: 8发出悬浮窗事件
+                // todo: 8发出悬浮窗事件 add
                 EventBus.getDefault().post(new UiEvent(FHUIConstants.FH_FLOAT_TYPE_SHARE, FHUIConstants.MIN_VIDEO));
                 FHVideoManager.getInstance().startScreen(resultCode, data);
             }
@@ -608,7 +609,7 @@ public class FHLiveActivity extends BaseActivity implements FHLiveListener {
                 showError(ros.getMsg(), ros.getSuc());
                 break;
 
-            // todo: 1 点击悬浮窗
+            // todo: 1 点击悬浮窗 add
             case FHUIConstants.ONCLICK_FLOAT:
                 addVideoEvent(ros.getType(), "");
                 break;

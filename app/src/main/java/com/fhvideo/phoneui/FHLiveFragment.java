@@ -116,7 +116,7 @@ public class FHLiveFragment extends Fragment implements FHVideoListener {
         }
     }
     private void initInviteVideo() {
-        //todo: 3. 这个fragment是客服接通后进入这里 在进入到FHVideoView中去
+        //todo: 3. 这个fragment是客服接通后进入这里 在进入到FHVideoView中去 add
         FHAPlayer.getInstance().stopPlayer();
         if(baseCallView != null)
             baseCallView.getView().setVisibility(View.GONE);
@@ -223,6 +223,7 @@ public class FHLiveFragment extends Fragment implements FHVideoListener {
                 FHVideoView.getInstance().onVideoEvent(ros.getType(), ros.getMsg());
             } else if (ros.getType().equals(FHBankParams.FH_BACK_METTING)) {
                 backMetting();
+                // todo: 收到悬浮窗事件 add
             } else if (ros.getType().equals(FHUIConstants.MIN_VIDEO)) {
                 minVideo(ros.getMsg());
             } else if (ros.getType().equals(FHUIConstants.CLOSE_LIVE)) {
@@ -410,7 +411,7 @@ public class FHLiveFragment extends Fragment implements FHVideoListener {
     }
 
 
-    // todo: 7 投屏
+    // todo: 7 投屏 add
     @Override
     public void uptVideoType(String msg) {
         if(isCalling)

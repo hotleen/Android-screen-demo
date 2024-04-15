@@ -412,7 +412,7 @@ public class FHVideoView implements View.OnClickListener {
 
     private String showScreenUserType = "";;
 
-    // todo: 4柜员投屏
+    // todo: 4柜员投屏 add
     public void onUptTellerType(String type, String data) {//柜员视频类型
         if (StringUtil.isEmpty(type))
             return;
@@ -489,7 +489,7 @@ public class FHVideoView implements View.OnClickListener {
 
     boolean iss = false;
 
-    // todo: 5点击事件
+    // todo: 5点击事件 add
     @Override
     public void onClick(View v) {
         if (v.getId() == ll_min.getId()) {//最小化视频窗口
@@ -713,7 +713,7 @@ public class FHVideoView implements View.OnClickListener {
         });
     }
 
-    //todo: 5 投屏点击
+    //todo: 5 投屏点击 add
     private void onClickScreen() {
         FHHintView.getInstance().show(getResString("fh_share_screen"),
                 getResString("fh_cancel"),
